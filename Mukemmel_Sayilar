@@ -1,0 +1,41 @@
+#include<stdio.h>
+
+
+void main()
+
+{
+	int t, i, j, toplam = 0, x, z;
+
+	printf("\n  1 ile 1000 arasindaki Mukemmel Sayilar...");
+
+	for (t = 2; t < 1000; t++)			//1000 e kadar olan sayılarda mükemmel sayıları bulması için bütün sayıları for döngüsüne soktum
+	{		
+
+		toplam = 0;						// her defasında toplamı sıfırlıyorum ki sayıların bölenlerinin toplamları birbirine karışmasın!
+
+		for (i = 1; i < t; i++)			//ilk döngüdeki sayıların bölenlerini bulmak için tanımlattım
+		{
+
+			if (t%i == 0)				//eğer bölen sayılar tam bölüyorsa 
+
+			{
+		
+				toplam = toplam + i;	//toplamaya başlıyor..
+				x = toplam;
+			}
+
+
+		}
+		if (x == t)
+		{
+			printf("\n  %3d\t", t);
+		}
+	}
+
+
+
+
+
+
+	getchar();
+}
